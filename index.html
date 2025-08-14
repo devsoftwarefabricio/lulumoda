@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lulu Moda Feminina - Elegância e Sofisticação</title>
+    <meta name="description" content="Descubra a coleção exclusiva da Lulu Moda Feminina. Peças que definem tendências com elegância e sofisticação para a mulher moderna.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome (Ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Swiper.js CSS (Para os Carrosséis) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ANIMAÇÃO DE PRÉ-CARREGAMENTO -->
+    <div id="preloader">
+        <div class="logo-loader">Lulu Moda</div>
+    </div>
+
+    <!-- CABEÇALHO -->
+    <header class="main-header">
+        <div class="container">
+            <a href="#" class="logo">Lulu Moda</a>
+            
+            <nav class="desktop-nav">
+                <a href="#vitrine">Início</a>
+                <a href="#promocoes">Promoções</a>
+                <a href="#produtos">Coleção</a>
+                <a href="#sobre">Sobre</a>
+            </nav>
+
+            <div class="header-right">
+                <div class="header-icons">
+                    <a href="#" id="cart-icon"><i class="fas fa-shopping-bag"></i><span id="cart-count">0</span></a>
+                </div>
+                <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navegação Mobile -->
+    <div id="mobile-menu" class="mobile-menu">
+        <nav>
+            <a href="#vitrine" class="mobile-menu-link">Início</a>
+            <a href="#promocoes" class="mobile-menu-link">Promoções</a>
+            <a href="#produtos" class="mobile-menu-link">Coleção</a>
+            <a href="#sobre" class="mobile-menu-link">Sobre</a>
+        </nav>
+    </div>
+
+
+    <main>
+        <!-- SEÇÃO VITRINE (IMAGEM ESTÁTICA) -->
+        <section id="vitrine" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('topo.png');">
+            <div class="vitrine-content">
+                <h1>Elegância em Cada Detalhe</h1>
+                <p>Peças exclusivas para mulheres que inspiram.</p>
+                <a href="#produtos" class="btn">Ver Coleção</a>
+            </div>
+        </section>
+
+        <!-- SEÇÃO SOBRE -->
+        <section id="sobre" class="container text-center">
+            <h2 class="animate-on-scroll">A Essência da Mulher Moderna</h2>
+            <p class="animate-on-scroll">A Lulu nasceu do desejo de vestir a mulher contemporânea com peças que unem design atemporal, qualidade impecável e as últimas tendências da moda. Cada coleção é cuidadosamente selecionada para celebrar a força e a sofisticação feminina.</p>
+        </section>
+
+        <!-- SEÇÃO DE PROMOÇÕES -->
+        <section id="promocoes">
+            <div class="container text-center">
+                <h2 class="animate-on-scroll">Ofertas Especiais</h2>
+                <p class="promo-subtitle animate-on-scroll">Aproveite descontos exclusivos em peças selecionadas por tempo limitado.</p>
+                <div class="promo-content animate-on-scroll">
+                    <img src="abc.png" alt="Promoção de Roupas" style="width:100%; max-width: 600px; margin-bottom: 20px;">
+                    <h3>Até <strong>40% OFF</strong> na coleção passada</h3>
+                    <a href="#produtos" class="btn btn-promo">Ver Peças em Promoção</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DE PRODUTOS (CAROUSEL) -->
+        <section id="produtos" class="container">
+            <h2 class="text-center animate-on-scroll">Nossa Coleção</h2>
+            <div class="swiper product-swiper animate-on-scroll">
+                <div class="swiper-wrapper" id="product-grid">
+                    <!-- Produtos serão inseridos aqui via JavaScript -->
+                </div>
+                <!-- Botões de Navegação -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="main-footer">
+        <div class="container text-center">
+            <p>Siga-nos e fique por dentro das novidades</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="logo-footer">Lulu</div>
+            <p class="copyright">&copy; 2025 Lulu Moda Feminina. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+    <a href="https://api.whatsapp.com/send?phone=SEUNUMERO" target="_blank" id="whatsapp-float" aria-label="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- MODAIS (JANELAS POP-UP) -->
+    <div id="product-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="product-modal-body">
+                <div class="product-carousel">
+                    <div class="main-image">
+                        <img id="modal-main-image" src="https://placehold.co/800x1200/fde0e6/333333?text=Lulu" alt="Imagem principal do produto">
+                    </div>
+                    <div class="thumbnail-images" id="modal-thumbnails"></div>
+                </div>
+                <div class="product-details">
+                    <h2 id="modal-product-name">Nome do Produto</h2>
+                    <p class="price" id="modal-product-price">R$ 0,00</p>
+                    <p class="description" id="modal-product-description">Descrição do produto aqui...</p>
+                    <div class="product-options">
+                        <div class="option-group"><label for="color-select">Cor:</label><select name="color" id="color-select"></select></div>
+                        <div class="option-group"><label for="size-select">Tamanho:</label><select name="size" id="size-select"></select></div>
+                    </div>
+                    <button class="btn btn-primary" id="add-to-cart-btn">Adicionar ao Carrinho</button>
+                    <p id="add-to-cart-feedback" class="feedback-message"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="cart-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h2>Meu Carrinho</h2>
+            <div id="cart-items"></div>
+            <div class="cart-summary">
+                <p>Total: <span id="cart-total">R$ 0,00</span></p>
+                <button class="btn btn-primary" id="checkout-btn" disabled>Finalizar Pedido</button>
+            </div>
+        </div>
+    </div>
+    <div id="checkout-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h2>Finalizar Pedido</h2>
+            <p>Por favor, preencha seus dados para concluir o pedido via WhatsApp.</p>
+            <form id="checkout-form">
+                <div class="form-group"><label for="customer-name">Nome Completo</label><input type="text" id="customer-name" required></div>
+                <div class="form-group"><label for="customer-address">Endereço de Entrega (Rua, Nº, Bairro, Cidade)</label><input type="text" id="customer-address" required></div>
+                <div class="form-group"><label for="customer-contact">Contato (Telefone/WhatsApp)</label><input type="text" id="customer-contact" required></div>
+                <div class="form-group"><label for="payment-method">Forma de Pagamento na Entrega</label><select id="payment-method" required><option value="Pix">Pix</option><option value="Cartão de Crédito">Cartão de Crédito</option><option value="Cartão de Débito">Cartão de Débito</option><option value="Dinheiro">Dinheiro</option></select></div>
+                <button type="submit" class="btn btn-primary">Enviar Pedido para o WhatsApp</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- NOVO: MODAL DE CONFIRMAÇÃO "ADICIONADO AO CARRINHO" -->
+    <div id="confirmation-modal" class="modal-overlay">
+        <div class="modal-content text-center" style="max-width: 450px;">
+            <button class="close-modal">&times;</button>
+            <div class="confirmation-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Produto Adicionado!</h2>
+            <p>Seu item foi adicionado ao carrinho com sucesso.</p>
+            <div class="confirmation-actions">
+                <button class="btn btn-secondary" id="continue-shopping-btn">Continuar Comprando</button>
+                <button class="btn btn-primary" id="go-to-cart-btn">Ver Carrinho</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Swiper.js SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- SCRIPT JAVASCRIPT PERSONALIZADO -->
+    <script src="script.js"></script>
+</body>
+</html>
